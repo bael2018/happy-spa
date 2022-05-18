@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import '/styles/achievement.css';
+@import '/styles/sales-timer.css';
+@import '/styles/technology.css';
+@import '/styles/features.css';
+@import '/styles/digital.css';
+@import '/styles/header.css';
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+}
+
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+main{
+    margin-top: 90px;
+}

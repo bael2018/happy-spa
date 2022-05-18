@@ -1,0 +1,33 @@
+.achievement{
+    background: #FF5437;
+    padding: 70px 0;
+}
+
+.achievement__wrapper{
+    margin: 0 auto;
+    width: 1168px;
+    display: flex;
+    box-sizing: border-box;
+    padding: 0 50px;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+}
+
+.achievement__wrapper__child h2{
+    margin: 0;
+    font-weight: 400;
+    font-size: 96px;
+    line-height: 96px;
+    color: #FFFFFF;
+}
+
+.achievement__wrapper__child p{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0;
+    margin-top: 10px;
+    letter-spacing: 2px;
+    color: #FFFFFF;
+}
