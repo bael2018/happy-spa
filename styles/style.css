@@ -1,10 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import '/styles/testimonials.css';
 @import '/styles/achievement.css';
 @import '/styles/sales-timer.css';
+@import '/styles/dark-mode.css';
 @import '/styles/technology.css';
+@import '/styles/download.css';
+@import '/styles/elements.css';
 @import '/styles/features.css';
+@import '/styles/pricing.css';
 @import '/styles/digital.css';
+@import '/styles/footer.css';
 @import '/styles/header.css';
+@import '/styles/modal.css';
+@import '/styles/faq.css';
 
 html{
     scroll-behavior: smooth;

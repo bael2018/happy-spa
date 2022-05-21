@@ -1,0 +1,11 @@
+.download{
+    padding-bottom: 130px;
+    padding-top: 100px;
+    text-align: center;
+}
+
+.download a img{
+    margin-top: 20px;
+    height: 60px;
+    width: 180px;
+}

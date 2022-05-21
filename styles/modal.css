@@ -1,0 +1,133 @@
+.modal{
+    background: rgba(0, 0, 0, 0.35);
+    width: 100%;
+    height: 100vh;
+    z-index: 2;
+    position: fixed;
+    transition: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    opacity: 0;
+    pointer-events: none;
+    left: 0;
+}
+
+.modal-visible{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal__wrapper{
+    background: white;
+    width: 506px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 40px 60px;
+    text-align: center;
+}
+
+.modal__wrapper h4{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    width: 312px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 0 20px;
+    text-align: center;
+    color: #000000;
+}
+
+.modal__wrapper form{
+    margin-top: 25px;
+}
+
+.user-info input{
+    width: 330px;
+    height: 42px;
+    border: none;
+    background: #F2F2F2;
+    outline: none;
+    padding: 0 15px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.user-info input::placeholder{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #7D7D7D;
+}
+
+.user-info input:focus{
+    border: 2px solid #5AB0FF;
+}
+
+.modal__wrapper form p{
+    margin: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #000000;
+}
+
+.plan{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.plan label{
+    width: 330px;
+    height: 42px;
+    background: #FAFAFA;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.plan label input{
+    opacity: 0;
+}
+
+.plan .standard{
+    border: 1px solid #0278ED;
+    color: #0278ED;
+}
+
+.plan .premium{
+    border: 1px solid #FF5437;
+    color: #FF5437;
+}
+
+.plan .lifetime{
+    border: 1px solid #FF9209;
+    color: #FF9209;
+}
+
+.plan-standard-active{
+    background: #0278ED !important;
+    color: white !important;
+}
+
+.plan-premium-active{
+    background: #FF5437 !important;
+    color: white !important;
+}
+
+.plan-lifetime-active{
+    background: #FF9209 !important;
+    color: white !important;
+}

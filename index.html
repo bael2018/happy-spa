@@ -20,16 +20,16 @@
                         <a href="#features">Features</a>
                     </li>
                     <li>
-                        <a href="#">Pricing</a>
+                        <a href="#pricing">Pricing</a>
                     </li>
                     <li>
-                        <a href="#">Testimonials</a>
+                        <a href="#testimonials">Testimonials</a>
                     </li>
                     <li>
-                        <a href="#">FAQ</a>
+                        <a href="#faq">FAQ</a>
                     </li>
                 </ul>
-                <button class="app_btn">GET THIS APP</button>
+                <button class="app-button">GET THIS APP</button>
             </div>
         </div>
     </header>
@@ -40,21 +40,21 @@
                 <h1>BIG SALE ON LIFETIME PLAN</h1>
                 <h4>there is very little bit</h4>
 
-                <div class="sales_timer__wrapper__timer">
+                <div id="timer" class="sales_timer__wrapper__timer">
                     <div>
-                        <h4>14</h4>
+                        <h4 id="timer-days"></h4>
                         <p>days</p>
                     </div>
                     <div>
-                        <h4>06</h4>
+                        <h4 id="timer-hours"></h4>
                         <p>hours</p>
                     </div>
                     <div>
-                        <h4>25</h4>
+                        <h4 id="timer-minutes"></h4>
                         <p>minutes</p>
                     </div>
                     <div>
-                        <h4 class="timer-border">52</h4>
+                        <h4 id="timer-seconds" class="timer-border"></h4>
                         <p>seconds</p>
                     </div>
                 </div>
@@ -71,8 +71,8 @@
                     <h2>The future of digital photos.</h2>
                     <p>The H(app)y app is the latest & greatest in phone photography. It's available in the App Store right now. Go check it out!</p>
                     <span class="digital__wrapper__content__buttons">
-                        <button>BUY NOW</button>
-                        <button>READ MORE</button>
+                        <button onclick="tariffHandler('lifetime')" class="app-button">BUY NOW</button>
+                        <button class="app-button">READ MORE</button>
                     </span>
                 </div>
                 <img class="digital__wrapper__image" src="img/zeonphone.png" alt="zeonphone">
@@ -200,11 +200,189 @@
                 <img class="technology__wrapper__image" src="img/zeonphone.png" alt="phone">
             </div>
         </section>
+
+        <section id="dark-mode" class="dark_mode">
+            <div class="dark_mode__wrapper">
+                <div id="dark-mode-title" class="section_title section_title-light">
+                    <h5>Dark mode</h5>
+                    <h3>Also available in <span>dark</span>.</h3>
+                    <p>Don't get blinded when using the H(app)y app at night, just turn off the lights. Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="dark_mode__wrapper__body">
+                    <img src="img/darkmodeimage.png" alt="dark-mode-image">
+                </div>
+                <div class="dark_mode__wrapper__footer">
+                    <button id="light-btn">
+                        <img class="light_image" src="img/whitesun.svg" alt="white-sun">
+                        <img class="dark_image" src="img/lightsun.svg" alt="white-sun">
+                        <span>LIGHT MODE</span>
+                    </button>
+
+                    <button id="dark-btn">
+                        <img class="light_image" src="img/lightmoon.svg" alt="white-sun">
+                        <img class="dark_image" src="img/darkmoon.svg" alt="white-sun">
+                        <span class="light-btn">DARK MODE</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="pricing">
+            <div class="pricing__wrapper">
+                <div class="section_title">
+                    <h5>PRICING</h5>
+                    <h3>A plan for every need.</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque aliquam odio et faucibus.</p>
+                </div>
+                <div class="pricing__wrapper__body">
+                    <div class="pricing__wrapper__body__child pricing__wrapper__body__child-standard">
+                        <h5>Standard</h5>
+                        <h2>$9</h2>
+                        <p>MONTHLY</p>
+                        <button onclick="tariffHandler('standard')">BUY NOW</button>
+                    </div>
+                    <div class="pricing__wrapper__body__child pricing__wrapper__body__child-premium">
+                        <h5>Premium</h5>
+                        <h2>$99</h2>
+                        <p>ANNUALLY</p>
+                        <button onclick="tariffHandler('premium')">BUY NOW</button>
+                    </div>
+                    <div class="pricing__wrapper__body__child pricing__wrapper__body__child-lifetime">
+                        <h5>Lifetime</h5>
+                        <h2>$149</h2>
+                        <p>UP FRONT</p>
+                        <button onclick="tariffHandler('lifetime')">BUY NOW</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="testimonials">
+            <div class="testimonials__wrapper">
+                <div class="section_title">
+                    <h5>TESTIMONIALS</h5>
+                    <h3>Don't take our word for it.</h3>
+                    <p>See what our customers are saying.</p>
+                </div>
+
+                <div class="testimonials__wrapper__body">
+                    <div class="testimonials__child">
+                        <p class="testimonials__child__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus.</p>
+                        <p>Pam Beesly</p>
+                        <p>Top Manager Happy Co</p>
+                    </div>
+                    <div class="testimonials__child">
+                        <p class="testimonials__child__text">Nulla efficitur auctor hendrerit. Etiam ut orci varius, faucibus libero ac, cursus quam. Aenean porta neque eget consequat fringilla.</p>
+                        <p>Michael Scott</p>
+                        <p>SMM Specialist</p>
+                    </div>
+                    <div class="testimonials__child">
+                        <p class="testimonials__child__text">Vestibulum ultrices, orci nec egestas pharetra, ligula est semper enim, nec auctor sapien leo nec purus.</p>
+                        <p>Angels Schrute</p>
+                        <p>CEO and CoFounder</p>
+                    </div>
+                </div>
+            </div>
+        </section>  
+
+        <section class="download">
+            <div class="section_title">
+                <h5>DOWNLOAD</h5>
+                <h3>It's available right now!</h3>
+                <p>Duis tristique sed lorem a vestibulum. Cras commodo consequat orci, in convallis risus egestas non.</p>
+            </div>
+            <a href="#">
+                <img src="img/appstore.png" alt="appstore">
+            </a>
+        </section>
+
+        <section id="faq" class="faq">
+            <div class="faq__wrapper">
+                <div class="faq__header">
+                    <h5>FAQ</h5>
+                    <p>Some questions & some answers</p>
+                </div>
+                <div class="faq__body">
+                    <div class="faq__body__child">
+                        <h4>What devices does H(app)y support?</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque aliquam odio et faucibus. Nulla rhoncus feugiat eros quis consectetur. Morbi neque ex, condimentum dapibus congue et, vulputate ut ligula.</p>
+                    </div>
+                    <div class="faq__body__child">
+                        <h4>How many megapixels does H(app)y support?</h4>
+                        <p>Nulla rhoncus feugiat eros quis consectetur. Morbi neque ex, condimentum dapibus congue et, vulputate ut ligula. Vestibulum sit amet urna turpis. Mauris euismod elit et nisi ultrices, ut faucibus orci tincidunt. Vestibulum sit amet urna turpis. Mauris euismod elit et nisi ultrices, ut faucibus orci tincidunt.</p>
+                    </div>
+                    <div class="faq__body__child">
+                        <h4>Will my photos magically be more beautiful if I use this app?</h4>
+                        <p>Vestibulum sit amet urna turpis. Mauris euismod elit et nisi ultrices, ut faucibus orci tincidunt. Duis tristique sed lorem a vestibulum. Cras commodo consequat orci, in convallis risus egestas non. Nulla efficitur auctor hendrerit.</p>
+                    </div>
+                    <div class="faq__body__child">
+                        <h4>How many photos can I store in H(app)y?</h4>
+                        <p>Vestibulum ultrices, orci nec egestas pharetra, ligula est semper enim, nec auctor sapien leo nec purus. Etiam ut orci varius, faucibus libero ac, cursus quam. Aenean porta neque eget consequat fringilla.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
-
+        <div class="footer_wrapper">
+            <img class="footer__logo" src="img/zeonicon.png" alt="zeon-logo">
+            <img class="footer__title" src="img/zeontitle.png" alt="zeon-logo">
+            <div>
+                <a href="#"><img src="img/bird.svg" alt="twitter"></a>
+                <a href="#"><img src="img/ins.svg" alt="instagram"></a>
+                <a href="#"><img src="img/facebook.svg" alt="facebook"></a>
+            </div>
+        </div>
     </footer>
-    <script src="js/index.js"></script>
+
+    <div id="modal" class="modal">
+        <div class="modal__wrapper">
+            <h4>Leave a request for the purchase of goods</h4>
+            <form onsubmit="formHandler()">
+                <div class="user-info">
+                    <input placeholder="name" type="text" name="username">
+                    <input placeholder="email" type="email" name="useremail">
+                </div>
+                <p>Your plan?</p>
+                <div class="plan">
+                    <label id="standard" class="standard">
+                        <input name="tariff" type="radio">
+                        Standard
+                    </label>
+                    <label id="premium" class="premium">
+                        <input name="tariff" type="radio">
+                        Premium
+                    </label>
+                    <label id="lifetime" class="lifetime">
+                        <input name="tariff" type="radio">
+                        Lifetime
+                    </label>
+                </div>
+                <p>How did you know about our app?</p>
+                <label>
+                    <input type="checkbox" name="socialapp">
+                    Facebook
+                </label>
+                <label>
+                    <input type="checkbox" name="socialapp">
+                    Instagram
+                </label>
+                <label>
+                    <input type="checkbox" name="socialapp">
+                    YouTube
+                </label>
+                <label>
+                    <input type="checkbox" name="socialapp">
+                    Other
+                </label>
+                <input class="app-button modal-btn" value="SEND" type="submit">
+            </form>
+        </div>
+    </div>
+
+    <script defer src="js/darkmode.js"></script>
+    <script defer src="js/tariff.js"></script>
+    <script defer src="js/timer.js"></script>
 </body>
 </html>

@@ -1,0 +1,145 @@
+.pricing{
+    padding: 80px 0;
+}
+
+.pricing__wrapper{
+    width: 1168px;
+    margin: 0 auto;
+}
+
+.pricing__wrapper__header{
+    text-align: center;
+}
+
+.pricing__wrapper__header h5{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #222222;
+}
+
+.pricing__wrapper__header h3{
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 36px;
+    text-align: center;
+    color: #222222;
+    margin: 2px 0;
+    margin-bottom: 13px;
+}
+
+.pricing__wrapper__header p{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    margin: 0 auto;
+    width: 568px;
+    text-align: center;
+    color: #666666;
+}
+
+.pricing__wrapper__body{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pricing__wrapper__body__child{
+    width: 32.5%;
+    background: #F2F2F2;
+    box-sizing: border-box;
+    padding: 40px 0;
+    border-radius: 20px;
+    text-align: center;
+}
+
+/* Standard-color-theme */
+
+.pricing__wrapper__body__child-standard h5{
+    color: #0278ED;
+}
+
+.pricing__wrapper__body__child-standard h2{
+    color: #0278ED;
+}
+
+.pricing__wrapper__body__child-standard button{
+    background: #0278ED;
+}
+
+/* Premium-color-theme */
+
+.pricing__wrapper__body__child-premium h5{
+    color: #FF5437;
+}
+
+.pricing__wrapper__body__child-premium h2{
+    color: #FF5437;
+}
+
+.pricing__wrapper__body__child-premium button{
+    background: #FF5437;
+}
+
+/* Lifetime-color-theme */
+
+.pricing__wrapper__body__child-lifetime h5{
+    color: #FF9209;
+}
+
+.pricing__wrapper__body__child-lifetime h2{
+    color: #FF9209;
+}
+
+.pricing__wrapper__body__child-lifetime button{
+    background: #FF9209;
+}
+
+.pricing__wrapper__body__child h5{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    margin: 0;
+}
+
+.pricing__wrapper__body__child h2{
+    font-weight: 400;
+    font-size: 108px;
+    line-height: 124px;
+    text-align: center;
+    letter-spacing: 8px;
+    margin: 0;
+}
+
+.pricing__wrapper__body__child p{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #222222;
+    margin: 0;
+    margin-top: 20px;
+}
+
+.pricing__wrapper__body__child button{
+    height: 40px;
+    width: 129px;
+    margin-top: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}

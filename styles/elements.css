@@ -1,0 +1,75 @@
+.app-button{
+    height: 40px;
+    background: #222222;
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: .3s;
+    padding: 0 20px;
+}
+
+.app-button:hover{
+    background: #4E4E4E;
+}
+
+.app-button:active{
+    transform: scale(.98);
+}
+
+.app-button:focus{
+    border: 2px solid #5AB0FF;
+}
+
+/* section-title */
+
+.section_title{
+    text-align: center;
+}
+
+.section_title-light h5,
+.section_title-light h3,
+.section_title-light p{
+    color: white !important;
+}
+
+.section_title span{
+    color: #FF9209;
+}
+
+.section_title h5{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #222222;
+}
+
+.section_title h3{
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 36px;
+    text-align: center;
+    color: #222222;
+    margin: 2px 0;
+    margin-bottom: 13px;
+}
+
+.section_title p{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    margin: 0 auto;
+    width: 568px;
+    text-align: center;
+    color: #666666;
+}

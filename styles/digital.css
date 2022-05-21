@@ -64,22 +64,6 @@
     display: flex;
 }
 
-.digital__wrapper__content__buttons button{
-    height: 40px;
-    background: #222222;
-    border-radius: 4px;
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 18px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    border: none;
-    cursor: pointer;
-    outline: none;
-    padding: 0 20px;
-}
-
 .digital__wrapper__content__buttons button:nth-child(1){
     margin-right: 10px;
 }
