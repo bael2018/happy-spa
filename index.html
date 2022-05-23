@@ -339,10 +339,16 @@
     <div id="modal" class="modal">
         <div class="modal__wrapper">
             <h4>Leave a request for the purchase of goods</h4>
-            <form onsubmit="formHandler()">
+            <form>
                 <div class="user-info">
-                    <input placeholder="name" type="text" name="username">
-                    <input placeholder="email" type="email" name="useremail">
+                    <label>
+                        <input id="userName" placeholder="name" type="text" name="username">
+                        <span></span>
+                    </label>
+                    <label>
+                        <input id="userEmail" placeholder="email" type="email" name="useremail">
+                        <span></span>
+                    </label>
                 </div>
                 <p>Your plan?</p>
                 <div class="plan">
@@ -360,29 +366,36 @@
                     </label>
                 </div>
                 <p>How did you know about our app?</p>
-                <label>
-                    <input type="checkbox" name="socialapp">
-                    Facebook
-                </label>
-                <label>
-                    <input type="checkbox" name="socialapp">
-                    Instagram
-                </label>
-                <label>
-                    <input type="checkbox" name="socialapp">
-                    YouTube
-                </label>
-                <label>
-                    <input type="checkbox" name="socialapp">
-                    Other
-                </label>
+                <div class="socials">
+                    <label onclick="socialsHandler()">
+                        <input type="checkbox" name="socialapp">
+                        <span><img src="img/fine.svg" alt="fine"></span>
+                        Facebook
+                    </label>
+                    <label onclick="socialsHandler()">
+                        <input type="checkbox" name="socialapp">
+                        <span><img src="img/fine.svg" alt="fine"></span>
+                        Instagram
+                    </label>
+                    <label onclick="socialsHandler()">
+                        <input type="checkbox" name="socialapp">
+                        <span><img src="img/fine.svg" alt="fine"></span>
+                        YouTube
+                    </label>
+                    <label onclick="socialsHandler()">
+                        <input type="checkbox" name="socialapp">
+                        <span><img src="img/fine.svg" alt="fine"></span>
+                        Other
+                    </label>
+                </div>
                 <input class="app-button modal-btn" value="SEND" type="submit">
+                <span class="isLoading"><img src="img/loading.svg" alt="load"> LOADING...</span>
             </form>
         </div>
     </div>
 
     <script defer src="js/darkmode.js"></script>
-    <script defer src="js/tariff.js"></script>
+    <script defer src="js/modal.js"></script>
     <script defer src="js/timer.js"></script>
 </body>
 </html>

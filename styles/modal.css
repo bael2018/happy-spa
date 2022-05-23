@@ -21,6 +21,8 @@
 
 .modal__wrapper{
     background: white;
+    height: 90vh;
+    overflow-y: scroll;
     width: 506px;
     border-radius: 4px;
     box-sizing: border-box;
@@ -41,7 +43,7 @@
 }
 
 .modal__wrapper form{
-    margin-top: 25px;
+    margin-top: 15px;
 }
 
 .user-info input{
@@ -53,10 +55,11 @@
     padding: 0 15px;
     box-sizing: border-box;
     border-radius: 4px;
-    margin-bottom: 15px;
+    margin-top: 15px;
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
+    position: relative;
 }
 
 .user-info input::placeholder{
@@ -64,6 +67,50 @@
     font-size: 16px;
     line-height: 24px;
     color: #7D7D7D;
+}
+
+.isLoading{
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: #7E7E7E;
+    margin-top: 30px;
+}
+
+.isLoading img {
+    margin-right: 15px;
+    height: 20px;
+    width: 16px;
+    animation: rotateLoad 3s linear infinite;
+}
+
+@keyframes rotateLoad {
+    0%{
+        transform: rotate(0);
+    }100%{
+        transform: rotate(360deg);
+    }
+}
+
+.invalid_input{
+    background: #FFEEEE !important;
+}
+
+.invalid_text{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #FF5437;
+    text-align: left;
+    padding-left: 25px;
+    margin-top: 5px;
+    display: block;
 }
 
 .user-info input:focus{
@@ -75,6 +122,7 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
+    margin-top: 15px;
     text-align: center;
     color: #000000;
 }
@@ -84,6 +132,7 @@
     align-items: center;
     flex-direction: column;
     margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 .plan label{
@@ -130,4 +179,60 @@
 .plan-lifetime-active{
     background: #FF9209 !important;
     color: white !important;
+}
+
+.socials{
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    align-items: center;
+}
+
+.socials label{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 120px;
+    position: relative;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.socials label input{
+    position: absolute;
+    left: 0;
+}
+
+.socials label span{
+    background: #FFFFFF;
+    border: 2px solid #0278ED;
+    border-radius: 4px;
+    width: 24px;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    justify-content: center;
+    height: 24px;
+}
+
+.socials label span img{
+    display: none;
+    height: 15px;
+    width: 19px;
+}
+
+.socials label input:checked ~ span img{
+    display: block;
+}
+
+.socials label input{
+    opacity: 0;
+}
+
+.modal-btn{
+    width: 172px;
+    margin-top: 25px;
 }
