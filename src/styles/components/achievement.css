@@ -14,7 +14,7 @@
     align-items: center;
 }
 
-.achievement__wrapper__child h2{
+.achievement__child h2{
     margin: 0;
     font-weight: 400;
     font-size: 96px;
@@ -22,7 +22,7 @@
     color: #FFFFFF;
 }
 
-.achievement__wrapper__child p{
+.achievement__child p{
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;

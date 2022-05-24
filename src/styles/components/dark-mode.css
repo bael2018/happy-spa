@@ -1,44 +1,44 @@
-.dark_mode{
+.dark-mode{
     background: #222222;
     padding: 80px 0;
 }
 
-.dark_mode-active{
+.dark-mode_active{
     background: white !important;
 }
 
-.dark_image{
+.dark-image{
     display: none;
 }
 
-.dark_mode-active .light_image{
+.dark-mode_active .light-image{
     display: none;
 }
 
-.dark_mode-active .dark_image{
+.dark-mode_active .dark-image{
     display: block;
 }
 
-.dark_mode-active .light-btn{
+.dark-mode_active .light-btn{
     color: #222222 !important;
 }
 
-.dark_mode-active button span{
+.dark-mode_active button span{
     color: #FF9209 !important;
 }
 
-.dark_mode__wrapper{
+.dark-mode__wrapper{
     width: 600px;
     margin: 0 auto;
     text-align: center;
 }
 
-.dark_mode__wrapper__body{
+.dark-mode__body{
     margin-top: 30px;
     position: relative;
 }
 
-.dark_mode__wrapper__body::before{
+.dark-mode__body::before{
     content: '';
     position: absolute;
     width: 100%;
@@ -48,18 +48,18 @@
     background: #E5E5E5;
 }
 
-.dark_mode__wrapper__body img{
+.dark-mode__body img{
     width: 400px;
     height: 486px;
 }
 
-.dark_mode__wrapper__footer{
+.dark-mode__footer{
     margin-top: 35px;
     display: flex;
     justify-content: center;
 }
 
-.dark_mode__wrapper__footer button{
+.dark-mode__footer button{
     cursor: pointer;
     border: none;
     outline: none;
@@ -70,7 +70,7 @@
     margin: 0 30px;
 }
 
-.dark_mode__wrapper__footer button span{
+.dark-mode__footer button span{
     color: white;
     margin-top: 10px;
     font-weight: 400;

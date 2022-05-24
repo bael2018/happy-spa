@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import '/src/styles/components/testimonials.css';
+@import '/src/styles/components/achievement.css';
+@import '/src/styles/components/sales-timer.css';
+@import '/src/styles/components/dark-mode.css';
+@import '/src/styles/components/technology.css';
+@import '/src/styles/components/download.css';
+@import '/src/styles/components/features.css';
+@import '/src/styles/components/pricing.css';
+@import '/src/styles/components/digital.css';
+@import '/src/styles/components/modal.css';
+@import '/src/styles/components/faq.css';
+@import '/src/styles/elements.css';
+@import '/src/styles/footer.css';
+@import '/src/styles/header.css';
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+main{
+    margin-top: 90px;
+}

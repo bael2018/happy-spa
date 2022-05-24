@@ -1,0 +1,41 @@
+.footer-wrapper{
+    height: 427px;
+    background: #F2F2F2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.footer-wrapper div{
+    margin-top: 20px;
+}
+
+.footer-wrapper div a{
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer-wrapper div a:nth-child(1) svg{
+    background: url('/img/bird.svg') center / cover;
+    height: 19.5px;
+    width: 24px;
+}
+
+.footer-wrapper div a:nth-child(2) svg{
+    background: url('/img/ins.svg') center / cover;
+    height: 24px;
+    width: 24px;
+}
+
+.footer-wrapper div a:nth-child(3) svg{
+    background: url('/img/facebook.svg') center / cover;
+    height: 24px;
+    width: 11.25px;
+}
+
+.footer-wrapper svg{
+    background: url('/img/footer-logo.svg') center / cover;
+    height: 126px;
+    width: 120px;
+}

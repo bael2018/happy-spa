@@ -11,7 +11,7 @@ header{
     align-items: center;
 }
 
-.header__wrapper{
+.header-wrapper{
     width: 1200px;
     margin: 0 auto;
     display: flex;
@@ -19,23 +19,18 @@ header{
     justify-content: space-between;
 }
 
-.header__wrapper__logo{
+.header-wrapper__logo{
     display: flex;
     align-items: center;
 }
 
-.header__wrapper__logo img:nth-child(1){
-    width: 40px;
+.header-wrapper__logo svg{
     height: 40px;
+    background: url('/img/zeon-logo.svg') center / cover;
+    width: 120px;
 }
 
-.header__wrapper__logo img:nth-child(2){
-    width: 71px;
-    margin-left: 5px;
-    height: 22px;
-}
-
-.header__wrapper__links ul{
+.header-wrapper__links ul{
     padding: 0;
     margin: 0;
     display: flex;
@@ -43,19 +38,20 @@ header{
     list-style: none;
 }
 
-.header__wrapper__links{
+.header-wrapper__links{
     display: flex;
     justify-content: space-between;
 }
 
-.header__wrapper__links ul li{
+.header-wrapper__links ul li{
     margin-right: 45px;
 }
 
-.header__wrapper__links ul li a{
+.header-wrapper__links ul li span{
     text-decoration: none;
     font-weight: 400;
     font-size: 15px;
     line-height: 24px;
     color: #666666;
+    cursor: pointer;
 }

@@ -4,43 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="src/styles/style.css">
     <title>H(app)y</title>
 </head>
 <body>
     <header>
-        <div class="header__wrapper">
-            <div class="header__wrapper__logo">
-                <img src="img/zeonicon.png" alt="zeon-logo">
-                <img src="img/zeontitle.png" alt="zeon-title">
+        <div class="header-wrapper">
+            <div class="header-wrapper__logo">
+                <svg></svg>
             </div>
-            <div class="header__wrapper__links">
+            <div class="header-wrapper__links">
                 <ul>
                     <li>
-                        <a href="#features">Features</a>
+                        <span onclick="scrollHandler(90, 'features')">Features</span>
                     </li>
                     <li>
-                        <a href="#pricing">Pricing</a>
+                        <span onclick="scrollHandler(90, 'pricing')">Pricing</span>
                     </li>
                     <li>
-                        <a href="#testimonials">Testimonials</a>
+                        <span onclick="scrollHandler(90, 'testimonials')">Testimonials</span>
                     </li>
                     <li>
-                        <a href="#faq">FAQ</a>
+                        <span onclick="scrollHandler(90, 'faq')">FAQ</span>
                     </li>
                 </ul>
-                <button class="app-button">GET THIS APP</button>
+                <button type="button" class="app-button">GET THIS APP</button>
             </div>
         </div>
     </header>
 
     <main>
-        <section class="sales_timer">
-            <div class="sales_timer__wrapper">
+        <section class="sales-timer">
+            <div class="sales-timer__wrapper">
                 <h1>BIG SALE ON LIFETIME PLAN</h1>
                 <h4>there is very little bit</h4>
 
-                <div id="timer" class="sales_timer__wrapper__timer">
+                <div id="timer" class="sales-timer__timer">
                     <div>
                         <h4 id="timer-days"></h4>
                         <p>days</p>
@@ -63,23 +62,22 @@
 
         <section class="digital">
             <div class="digital__wrapper">
-                <div class="digital__wrapper__content">
-                    <span class="digital__wrapper__content__icons">
-                        <img src="img/zeonicon.png" alt="zeonicon">
-                        <img src="img/zeontitle.png" alt="zeontitle">
+                <div class="digital__content">
+                    <span class="digital__content__icons">
+                        <svg></svg>
                     </span>
                     <h2>The future of digital photos.</h2>
                     <p>The H(app)y app is the latest & greatest in phone photography. It's available in the App Store right now. Go check it out!</p>
-                    <span class="digital__wrapper__content__buttons">
-                        <button onclick="tariffHandler('lifetime')" class="app-button">BUY NOW</button>
-                        <button class="app-button">READ MORE</button>
+                    <span class="digital__content__buttons">
+                        <button type="button" onclick="tariffHandler('lifetime')" class="app-button">BUY NOW</button>
+                        <button type="button" class="app-button">READ MORE</button>
                     </span>
                 </div>
-                <img class="digital__wrapper__image" src="img/zeonphone.png" alt="zeonphone">
+                <img class="digital__image" src="img/zeonphone.png" alt="zeonphone">
             </div>
         </section>
 
-        <section id="features" class="features">
+        <section class="features">
             <div class="features__wrapper">
                 <div class="features__wrapper__header">
                     <h5>FEATURES</h5>
@@ -164,15 +162,15 @@
 
         <section class="achievement">
             <div class="achievement__wrapper">
-                <div class="achievement__wrapper__child">
+                <div class="achievement__child">
                     <h2>400+</h2>
                     <p>PICTURES ANALYZED</p>
                 </div>
-                <div class="achievement__wrapper__child">
+                <div class="achievement__child">
                     <h2>25+</h2>
                     <p>OPERATIONS PER MINUTE</p>
                 </div>
-                <div class="achievement__wrapper__child">
+                <div class="achievement__child">
                     <h2>95%</h2>
                     <p>ACCURACY</p>
                 </div>
@@ -181,85 +179,85 @@
 
         <section class="technology">
             <div class="technology__wrapper">
-                <div class="technology__wrapper__content">
+                <div class="technology__content">
                     <h5>TECHNOLOGY</h5>
                     <h3>Use H(app)y to give your digital photos some pop.</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
                 </div>
-                <img class="technology__wrapper__image" src="img/technology-image.png" alt="phone">
+                <img class="technology__image" src="img/technology-image.png" alt="phone">
             </div>
         </section>
 
         <section class="technology technology-dark">
             <div class="technology__wrapper technology__wrapper-end">
-                <div class="technology__wrapper__content">
+                <div class="technology__content">
                     <h5>Speed & security</h5>
                     <h3>State-of-the-art processing capabilities..</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
                 </div>
-                <img class="technology__wrapper__image" src="img/zeonphone.png" alt="phone">
+                <img class="technology__image" src="img/zeonphone.png" alt="phone">
             </div>
         </section>
 
-        <section id="dark-mode" class="dark_mode">
-            <div class="dark_mode__wrapper">
-                <div id="dark-mode-title" class="section_title section_title-light">
+        <section id="dark-mode" class="dark-mode">
+            <div class="dark-mode__wrapper">
+                <div id="dark-mode__title" class="section-title section-title_light">
                     <h5>Dark mode</h5>
                     <h3>Also available in <span>dark</span>.</h3>
                     <p>Don't get blinded when using the H(app)y app at night, just turn off the lights. Lorem ipsum dolor sit amet.</p>
                 </div>
-                <div class="dark_mode__wrapper__body">
-                    <img src="img/darkmodeimage.png" alt="dark-mode-image">
+                <div class="dark-mode__body">
+                    <img src="img/darkmodeimage.png" alt="dark-mode__image">
                 </div>
-                <div class="dark_mode__wrapper__footer">
-                    <button id="light-btn">
-                        <img class="light_image" src="img/whitesun.svg" alt="white-sun">
-                        <img class="dark_image" src="img/lightsun.svg" alt="white-sun">
+                <div class="dark-mode__footer">
+                    <button type="button" id="light-btn">
+                        <img class="light-image" src="img/whitesun.svg" alt="sun">
+                        <img class="dark-image" src="img/lightsun.svg" alt="sun">
                         <span>LIGHT MODE</span>
                     </button>
 
-                    <button id="dark-btn">
-                        <img class="light_image" src="img/lightmoon.svg" alt="white-sun">
-                        <img class="dark_image" src="img/darkmoon.svg" alt="white-sun">
+                    <button type="button" id="dark-btn">
+                        <img class="light-image" src="img/lightmoon.svg" alt="moon">
+                        <img class="dark-image" src="img/darkmoon.svg" alt="moon">
                         <span class="light-btn">DARK MODE</span>
                     </button>
                 </div>
             </div>
         </section>
 
-        <section id="pricing" class="pricing">
+        <section class="pricing">
             <div class="pricing__wrapper">
-                <div class="section_title">
+                <div class="section-title">
                     <h5>PRICING</h5>
                     <h3>A plan for every need.</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque aliquam odio et faucibus.</p>
                 </div>
-                <div class="pricing__wrapper__body">
-                    <div class="pricing__wrapper__body__child pricing__wrapper__body__child-standard">
+                <div class="pricing__body">
+                    <div class="pricing__body__child pricing__body__child-standard">
                         <h5>Standard</h5>
                         <h2>$9</h2>
                         <p>MONTHLY</p>
-                        <button onclick="tariffHandler('standard')">BUY NOW</button>
+                        <button type="button" onclick="tariffHandler('standard')">BUY NOW</button>
                     </div>
-                    <div class="pricing__wrapper__body__child pricing__wrapper__body__child-premium">
+                    <div class="pricing__body__child pricing__body__child-premium">
                         <h5>Premium</h5>
                         <h2>$99</h2>
                         <p>ANNUALLY</p>
-                        <button onclick="tariffHandler('premium')">BUY NOW</button>
+                        <button type="button" onclick="tariffHandler('premium')">BUY NOW</button>
                     </div>
-                    <div class="pricing__wrapper__body__child pricing__wrapper__body__child-lifetime">
+                    <div class="pricing__body__child pricing__body__child-lifetime">
                         <h5>Lifetime</h5>
                         <h2>$149</h2>
                         <p>UP FRONT</p>
-                        <button onclick="tariffHandler('lifetime')">BUY NOW</button>
+                        <button type="button" onclick="tariffHandler('lifetime')">BUY NOW</button>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="testimonials" class="testimonials">
+        <section class="testimonials">
             <div class="testimonials__wrapper">
-                <div class="section_title">
+                <div class="section-title">
                     <h5>TESTIMONIALS</h5>
                     <h3>Don't take our word for it.</h3>
                     <p>See what our customers are saying.</p>
@@ -286,17 +284,17 @@
         </section>  
 
         <section class="download">
-            <div class="section_title">
+            <div class="section-title">
                 <h5>DOWNLOAD</h5>
                 <h3>It's available right now!</h3>
                 <p>Duis tristique sed lorem a vestibulum. Cras commodo consequat orci, in convallis risus egestas non.</p>
             </div>
             <a href="#">
-                <img src="img/appstore.png" alt="appstore">
+                <svg></svg>
             </a>
         </section>
 
-        <section id="faq" class="faq">
+        <section class="faq">
             <div class="faq__wrapper">
                 <div class="faq__header">
                     <h5>FAQ</h5>
@@ -325,19 +323,19 @@
     </main>
 
     <footer>
-        <div class="footer_wrapper">
-            <img class="footer__logo" src="img/zeonicon.png" alt="zeon-logo">
-            <img class="footer__title" src="img/zeontitle.png" alt="zeon-logo">
+        <div class="footer-wrapper">
+            <svg></svg>
             <div>
-                <a href="#"><img src="img/bird.svg" alt="twitter"></a>
-                <a href="#"><img src="img/ins.svg" alt="instagram"></a>
-                <a href="#"><img src="img/facebook.svg" alt="facebook"></a>
+                <a href="#"><svg></svg></a>
+                <a href="#"><svg></svg></a>
+                <a href="#"><svg></svg></a>
             </div>
         </div>
     </footer>
 
-    <div id="modal" class="modal">
+    <div class="modal">
         <div class="modal__wrapper">
+            <svg class="modal-closer"></svg>
             <h4>Leave a request for the purchase of goods</h4>
             <form>
                 <div class="user-info">
@@ -353,14 +351,17 @@
                 <p>Your plan?</p>
                 <div class="plan">
                     <label id="standard" class="standard">
+                        <svg></svg>
                         <input name="tariff" type="radio">
                         Standard
                     </label>
                     <label id="premium" class="premium">
+                        <svg></svg>
                         <input name="tariff" type="radio">
                         Premium
                     </label>
                     <label id="lifetime" class="lifetime">
+                        <svg></svg>
                         <input name="tariff" type="radio">
                         Lifetime
                     </label>
@@ -369,24 +370,25 @@
                 <div class="socials">
                     <label onclick="socialsHandler()">
                         <input type="checkbox" name="socialapp">
-                        <span><img src="img/fine.svg" alt="fine"></span>
+                        <span><svg></svg></span>
                         Facebook
                     </label>
                     <label onclick="socialsHandler()">
                         <input type="checkbox" name="socialapp">
-                        <span><img src="img/fine.svg" alt="fine"></span>
+                        <span><svg></svg></span>
                         Instagram
                     </label>
                     <label onclick="socialsHandler()">
                         <input type="checkbox" name="socialapp">
-                        <span><img src="img/fine.svg" alt="fine"></span>
+                        <span><svg></svg></span>
                         YouTube
                     </label>
                     <label onclick="socialsHandler()">
                         <input type="checkbox" name="socialapp">
-                        <span><img src="img/fine.svg" alt="fine"></span>
+                        <span><svg></svg></span>
                         Other
                     </label>
+                    <p>pick one social !</p>
                 </div>
                 <input class="app-button modal-btn" value="SEND" type="submit">
                 <span class="isLoading"><img src="img/loading.svg" alt="load"> LOADING...</span>
@@ -394,8 +396,9 @@
         </div>
     </div>
 
-    <script defer src="js/darkmode.js"></script>
-    <script defer src="js/modal.js"></script>
-    <script defer src="js/timer.js"></script>
+    <script defer src="src/js/darkmode.js"></script>
+    <script defer src="src/js/modal.js"></script>
+    <script defer src="src/js/scroll.js"></script>
+    <script defer src="src/js/timer.js"></script>
 </body>
 </html>

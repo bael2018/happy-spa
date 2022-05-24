@@ -1,4 +1,4 @@
-.sales_timer{
+.sales-timer{
     width: 100%;
     height: 450px;
     background: url('/img/zeonbackground.png') center / cover;
@@ -7,12 +7,12 @@
     justify-content: center;
 }
 
-.sales_timer__wrapper{
+.sales-timer__wrapper{
     text-align: center;
     color: white;
 }
 
-.sales_timer__wrapper h1{
+.sales-timer__wrapper h1{
     font-weight: 700;
     font-size: 50px;
     line-height: 75px;
@@ -22,7 +22,7 @@
     text-transform: uppercase;
 }
 
-.sales_timer__wrapper h4{
+.sales-timer__wrapper h4{
     font-weight: 700;
     font-size: 30px;
     margin: 0;
@@ -32,7 +32,7 @@
     color: #FFFFFF;
 }
 
-.sales_timer__wrapper__timer{
+.sales-timer__timer{
     justify-content: space-between;
     align-items: center;
     display: flex;
@@ -40,12 +40,12 @@
     width: 789px;
 }
 
-.sales_timer__wrapper__timer div{
+.sales-timer__timer div{
     text-align: center;
     width: 25%;
 }
 
-.sales_timer__wrapper__timer div h4{
+.sales-timer__timer div h4{
     border-right: 7px solid white;
     margin: 0;
     height: 85px;
@@ -62,7 +62,7 @@
     border: none !important;
 }
 
-.sales_timer__wrapper__timer div p{
+.sales-timer__timer div p{
     margin: 0;
     font-weight: 700;
     font-size: 24px;

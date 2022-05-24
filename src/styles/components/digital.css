@@ -14,7 +14,7 @@
     justify-content: space-between;
 }
 
-.digital__wrapper__image{
+.digital__image{
     position: absolute;
     width: 376px;
     height: 744px;
@@ -22,11 +22,11 @@
     right: 50px;
 }
 
-.digital__wrapper__content{
+.digital__content{
     width: 420px;
 }
 
-.digital__wrapper__content h2{
+.digital__content h2{
     font-weight: 400;
     font-size: 54px;
     line-height: 50px;
@@ -35,7 +35,7 @@
     margin-top: 15px;
 }
 
-.digital__wrapper__content p{
+.digital__content p{
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -44,26 +44,21 @@
     color: #222222;
 }
 
-.digital__wrapper__content__icons {
+.digital__content__icons {
     display: flex;
     align-items: center;
 }
 
-.digital__wrapper__content__icons img:nth-child(1){
+.digital__content__icons svg {
     height: 64px;
-    width: 63px;
+    background: url('/img/zeon-logo.svg') center / cover;
+    width: 192px;
 }
 
-.digital__wrapper__content__icons img:nth-child(2){
-    height: 35px;
-    width: 113px;
-    margin-left: 10px;
-}
-
-.digital__wrapper__content__buttons{
+.digital__content__buttons{
     display: flex;
 }
 
-.digital__wrapper__content__buttons button:nth-child(1){
+.digital__content__buttons button:nth-child(1){
     margin-right: 10px;
 }

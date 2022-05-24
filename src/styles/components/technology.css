@@ -24,7 +24,7 @@
     justify-content: flex-end;
 }
 
-.technology__wrapper__image{
+.technology__image{
     height: 744px;
     position: absolute;
     right: 70px;
@@ -36,11 +36,11 @@
     left: 70px;
 }
 
-.technology__wrapper__content{
+.technology__content{
     width: 420px;
 }
 
-.technology__wrapper__content h5{
+.technology__content h5{
     font-weight: 400;
     margin: 0;
     text-transform: uppercase;
@@ -51,7 +51,7 @@
     color: #222222;
 }
 
-.technology__wrapper__content h3{
+.technology__content h3{
     font-weight: 400;
     font-size: 32px;
     margin: 0;
@@ -59,7 +59,7 @@
     color: #222222;
 }
 
-.technology__wrapper__content p{
+.technology__content p{
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;

@@ -24,7 +24,7 @@
 }
 
 .app-button:focus{
-    border: 2px solid #5AB0FF;
+    outline: 2px solid #5AB0FF;
 }
 
 /* section-title */
@@ -33,17 +33,17 @@
     text-align: center;
 }
 
-.section_title-light h5,
-.section_title-light h3,
-.section_title-light p{
+.section-title_light h5,
+.section-title_light h3,
+.section-title_light p{
     color: white !important;
 }
 
-.section_title span{
+.section-title span{
     color: #FF9209;
 }
 
-.section_title h5{
+.section-title h5{
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
@@ -54,7 +54,7 @@
     color: #222222;
 }
 
-.section_title h3{
+.section-title h3{
     font-weight: 400;
     font-size: 32px;
     line-height: 36px;
@@ -64,7 +64,7 @@
     margin-bottom: 13px;
 }
 
-.section_title p{
+.section-title p{
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;

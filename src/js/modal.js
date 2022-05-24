@@ -3,7 +3,7 @@
 const planInputs = document.querySelectorAll('.plan label input')
 const plan = document.querySelector('.plan')
 
-let tarif = ''
+let pickedPlan = ''
 
 const [...inputs] = planInputs
 
@@ -12,7 +12,7 @@ plan.addEventListener('click' , () => {
         const active = item.parentElement.getAttribute('id')
         if(item.checked){
             item.parentElement.classList.add(`plan-${active}-active`)
-            tarif = active
+            pickedPlan = active
         }else{
             item.parentElement.classList.remove(`plan-${active}-active`)
         }
@@ -25,6 +25,7 @@ const modal = document.querySelector('.modal')
 
 const tariffHandler = (text) => {
     modal.classList.add('modal-visible')
+    document.body.style.overflow = 'hidden'
 
     inputs.forEach(item => {
         const active = item.parentElement.getAttribute('id')
@@ -32,7 +33,7 @@ const tariffHandler = (text) => {
         if(active === text){
             item.checked = true
             item.parentElement.classList.add(`plan-${active}-active`)
-            tarif = active
+            pickedPlan = active
         }else{
             item.parentElement.classList.remove(`plan-${active}-active`)
         }
@@ -41,11 +42,12 @@ const tariffHandler = (text) => {
 
 // modal-closer
 
-document.body.addEventListener('click' , e => {
-    if(e.target.id === 'modal'){
-        modal.classList.remove('modal-visible')
-    }
-})
+const modalCloser = () => {
+    modal.classList.remove('modal-visible')
+    document.body.style.overflow = 'auto'
+}
+
+document.querySelector('.modal-closer').addEventListener('click' , modalCloser)
 
 // modal-socials handler
 
@@ -54,7 +56,7 @@ let pickedSocials = []
 
 function socialsHandler(){
     const socialsArr = [...socials];
-
+    
     socialsArr.forEach(input => {   
         if(input.checked){
             const socialText = input.parentElement.lastChild
@@ -67,6 +69,12 @@ function socialsHandler(){
             pickedSocials = pickedSocials.filter(item => item !== socialText.textContent.trim())
         }
     })
+
+    if(!pickedSocials.length){
+        invalidSocialText.classList.add('invalid-socials')
+    }else{
+        invalidSocialText.classList.remove('invalid-socials')
+    }
 }
 
 // form-handling
@@ -74,53 +82,63 @@ function socialsHandler(){
 const userName = document.querySelector('#userName')
 const userEmail = document.querySelector('#userEmail')
 const loader = document.querySelector('.isLoading')
+const invalidSocialText = document.querySelector('.socials p')
+
+// form-validator
+
+const validate = (inputValue, input) => {
+    let isValid = false
+    if (!inputValue || (inputValue && inputValue.length < 3)) {
+        input.classList.add('invalid_input');
+        input.nextElementSibling.classList.add('invalid_text')
+        input.nextElementSibling.textContent = inputValue && inputValue.length < 3
+            ? 'should be more then 3 symbols'
+            : 'this field is reqiured*';
+        input.nextElementSibling.style.display = 'block'
+        isValid = false
+    }
+    else {
+        input.classList.remove('invalid_input')
+        input.nextElementSibling.style.display = 'none'
+        isValid = true
+    }
+    return isValid
+}
+
+// form-input's value handling while changing
+
+userName.addEventListener('input' , e => {
+    const inputValue = e.target.value
+    validate(inputValue, userName)
+})
+
+userEmail.addEventListener('input' , e => {
+    const inputValue = e.target.value
+    validate(inputValue, userEmail)
+})
+
+// form-input button to submit form
 
 document.querySelector('.modal-btn').addEventListener('click' , e => {
     e.preventDefault()
 
-    let isValid = false
+    const isValidName = validate(userName.value, userName)
+    const isValidEmail = validate(userEmail.value, userEmail)
 
-    if(userName.value && userName.value.length < 3){
-        userName.classList.add('invalid_input')
-        userName.nextElementSibling.classList.add('invalid_text')
-        userName.nextElementSibling.textContent = 'should be more then 3 symbols'
-    }else if(!userName.value){
-        userName.classList.add('invalid_input')
-        userName.nextElementSibling.classList.add('invalid_text')
-        userName.nextElementSibling.textContent = 'this field is reqiured*'
-    }else{
-        isValid = true
-        userName.classList.remove('invalid_input')
-        userName.nextElementSibling.style.display = 'none'
-    }
-
-    if(userEmail.value && userEmail.value.length < 3){
-        userEmail.classList.add('invalid_input')
-        userEmail.nextElementSibling.classList.add('invalid_text')
-        userEmail.nextElementSibling.textContent = 'should be more then 3 symbols'
-    }else if(!userEmail.value){
-        userEmail.classList.add('invalid_input')
-        userEmail.nextElementSibling.classList.add('invalid_text')
-        userEmail.nextElementSibling.textContent = 'this field is reqiured*'
-    }else{
-        isValid = true
-        userEmail.classList.remove('invalid_input')
-        userEmail.nextElementSibling.style.display = 'none'
-    }
-
-    if(isValid && pickedSocials.length){
+    if(isValidEmail && isValidName && pickedSocials.length){
         loader.style.display = 'flex'
         const data = {
             userName: userName.value,
             userEmail: userEmail.value,
-            userPlan: tarif,
+            userPlan: pickedPlan,
             userPickedApp: pickedSocials
         }
-        console.log(data);
         setTimeout(() => {
             loader.style.display = 'none'
+            modalCloser()
+            console.log(data);
         }, 2000);
-    }else{
-        alert('Pick one app')
+    }else if (pickedSocials.length === 0){
+        invalidSocialText.classList.add('invalid-socials')
     }
 })

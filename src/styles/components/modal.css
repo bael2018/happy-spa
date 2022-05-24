@@ -2,15 +2,20 @@
     background: rgba(0, 0, 0, 0.35);
     width: 100%;
     height: 100vh;
-    z-index: 2;
+    z-index: 10;
     position: fixed;
     transition: .3s;
+    overflow-y: scroll;
     display: flex;
+    padding: 50px 0;
+    padding-top: 100px;
     align-items: center;
     justify-content: center;
     top: 0;
     opacity: 0;
     pointer-events: none;
+    box-sizing: border-box;
+    overflow-x: hidden;
     left: 0;
 }
 
@@ -21,12 +26,11 @@
 
 .modal__wrapper{
     background: white;
-    height: 90vh;
-    overflow-y: scroll;
     width: 506px;
     border-radius: 4px;
     box-sizing: border-box;
     padding: 40px 60px;
+    position: relative;
     text-align: center;
 }
 
@@ -69,6 +73,12 @@
     color: #7D7D7D;
 }
 
+.user-info label span{
+    width: 330px;
+    display: block;
+    margin: 0 auto;
+}
+
 .isLoading{
     margin-top: 20px;
     font-weight: 400;
@@ -109,12 +119,12 @@
     color: #FF5437;
     text-align: left;
     padding-left: 25px;
-    margin-top: 5px;
+    margin-top: 5px !important;
     display: block;
 }
 
 .user-info input:focus{
-    border: 2px solid #5AB0FF;
+    outline: 2px solid #5AB0FF;
 }
 
 .modal__wrapper form p{
@@ -145,10 +155,21 @@
     justify-content: center;
     margin-bottom: 10px;
     cursor: pointer;
+    position: relative;
+}
+
+.plan label svg{
+    position: absolute;
+    opacity: 0;
+    left: 15px;
+    height: 15px;
+    width: 19px;
+    background: url('/img/correct.svg') center / cover;
 }
 
 .plan label input{
     opacity: 0;
+    position: absolute;
 }
 
 .plan .standard{
@@ -171,14 +192,26 @@
     color: white !important;
 }
 
+.plan-standard-active svg{
+    opacity: 1 !important;
+}
+
 .plan-premium-active{
     background: #FF5437 !important;
     color: white !important;
 }
 
+.plan-premium-active svg{
+    opacity: 1 !important;
+}
+
 .plan-lifetime-active{
     background: #FF9209 !important;
     color: white !important;
+}
+
+.plan-lifetime-active svg{
+    opacity: 1 !important;
 }
 
 .socials{
@@ -192,7 +225,7 @@
     display: flex;
     align-items: center;
     cursor: pointer;
-    width: 120px;
+    width: 135px;
     position: relative;
     margin-bottom: 10px;
     font-weight: 400;
@@ -218,13 +251,14 @@
     height: 24px;
 }
 
-.socials label span img{
+.socials label span svg{
+    background: url('/img/fine.svg') center / cover;
     display: none;
     height: 15px;
     width: 19px;
 }
 
-.socials label input:checked ~ span img{
+.socials label input:checked ~ span svg{
     display: block;
 }
 
@@ -235,4 +269,24 @@
 .modal-btn{
     width: 172px;
     margin-top: 25px;
+}
+
+.modal-closer{
+    background: url('/img/modal-closer.svg') center / cover;
+    height: 16px;
+    position: absolute;
+    top: 25px;
+    cursor: pointer;
+    right: 25px;
+    width: 16px;
+}
+
+.socials p{
+    display: none;
+    color: #FF5437 !important;
+    margin: 0 !important;
+}
+
+.invalid-socials{
+    display: block !important;
 }
